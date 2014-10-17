@@ -21,6 +21,9 @@ public class basechar {
     public int getStrength(){
 	return strength;
     }
+    public void setName(String n){
+	name = n;
+    }
 
     public void pause(int t){
 	try {
