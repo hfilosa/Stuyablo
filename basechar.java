@@ -2,16 +2,25 @@ public class basechar {
     private int health;
     private int strength;
     private int defense;
+    private int speed
     private String name;
 
+    public void setSpeed (int s){
+	speed = s;
+    }
+	
     public void setHealth(int h){
-	health=h;}
+	health=h;
+    }
     public int getHealth(){
-	return health;}
+	return health;
+    }
     public void setStrength(int s){
-	strength=s;}
+	strength=s;
+    }
     public int getStrength(){
-	return strength;}
+	return strength;
+    }
 
     public void pause(int t){
 	try {
