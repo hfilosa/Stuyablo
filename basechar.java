@@ -5,6 +5,10 @@ public class basechar {
     private int speed
     private String name;
 
+    public String toString(){
+	return name;
+    }
+
     public void setSpeed (int s){
 	speed = s;
     }
@@ -23,6 +27,10 @@ public class basechar {
     }
     public void setName(String n){
 	name = n;
+    }
+
+    public String attack(basechar other){
+	return this + "is attacking" + other;
     }
 
     public void pause(int t){
