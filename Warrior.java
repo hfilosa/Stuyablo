@@ -1,6 +1,6 @@
-public class warrior extends basechar
+public class Warrior extends basechar
 {
-    public void warrior()
+    public void Warrior()
     {
 	setStrength(100);
 	setHealth(150);
