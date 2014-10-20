@@ -1,4 +1,4 @@
-public class basechar {
+public abstract class basechar {
     private int health;
     private int strength;
     private int defense;
@@ -38,9 +38,8 @@ public class basechar {
     public String getName(){
 	return name;
     }
-    public String attack(basechar other){
-	return this + "is attacking" + other;
-    }
+    
+    public abstract void attack(basechar other);
 
     public void pause(int t){
 	try {
