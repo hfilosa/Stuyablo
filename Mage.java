@@ -7,5 +7,7 @@ public class Mage extends basechar {
     }
     public void mageAttack(basechar other) {
 	other.setHealth(health-manna);
-	System.out.println(this.getName()+" attacks "+this.getName()+" for "+manna+" damage!";
+	System.out.println(this.getName()+" attacks "+this.getName()+" for "+manna+" damage!");
     }
+}
+			   
