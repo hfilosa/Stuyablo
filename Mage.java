@@ -1,5 +1,6 @@
 public class Mage extends basechar {
-    public void Mage() {
+    public Mage(String n) {
+	setName(n);
 	setStrength(50);
 	setHealth(100);
 	setSpeed(75);
@@ -7,7 +8,7 @@ public class Mage extends basechar {
     }
     public void attack(basechar other) {
 	other.setHealth(other.getHealth-manna);
-	System.out.println(this.getName()+" casts a SPELL on "+other.getName()+" for "+manna+" damage!");
+	System.out.println(this.getName()+" casts CRASH on "+other.getName()+" for "+manna+" damage!");
     }
 }
 			   
