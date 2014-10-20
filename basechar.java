@@ -2,7 +2,8 @@ public class basechar {
     private int health;
     private int strength;
     private int defense;
-    private int speed
+    private int speed;
+    private int manna;      
     private String name;
 
     public String toString(){
@@ -25,10 +26,18 @@ public class basechar {
     public int getStrength(){
 	return strength;
     }
+    public void setManna(int s){
+	manna=s;
+    }
+    public int getManna(){
+	return manna;
+    }
     public void setName(String n){
 	name = n;
     }
-
+    public String getName(){
+	return name;
+    }
     public String attack(basechar other){
 	return this + "is attacking" + other;
     }
