@@ -4,11 +4,19 @@ public abstract class basechar {
     private int defense;
     private int speed;
     private int manna;      
-    private boolean defending
+    private boolean defending;
+    private int attackStrength;
     private String name;
 
+    
     public String toString(){
 	return name;
+    }
+    public void setAttackStrength (int s){
+	attackStrength = s;
+    }
+    public void lowerAttackStrength (int l){
+	attackStrength = attackStrength - l;
     }
     public void setDefending (boolean b){
 	defending = b;
