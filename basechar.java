@@ -10,7 +10,9 @@ public abstract class basechar {
     public String toString(){
 	return name;
     }
-
+    public void setDefending (boolean b){
+	defending = b;
+    }
     public void setSpeed (int s){
 	speed = s;
     }
