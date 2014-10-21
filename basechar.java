@@ -13,6 +13,9 @@ public abstract class basechar {
     public void setDefending (boolean b){
 	defending = b;
     }
+    public boolean getDefending () {
+	return defending;
+    }
     public void setSpeed (int s){
 	speed = s;
     }
