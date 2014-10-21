@@ -1,12 +1,34 @@
+import java.util.Random;
 public class rogue extends basechar
 {
-    public void warrior()
+	Random randomNumber = new Random();
+    public rogue()
     {
-	setStrength(100);
-	setHealth(150);
-	setSpeed(50);
+	setStrength(65 + randomNumber.nextInt(20));
+	setHealth(65 + randomNumber.nextInt(20));
+	setSpeed(140 + randomNumber.nextInt(20));
     }
-    public int warriorAttack()
+    public void slash(basechar other)
     {
-	System.out.println("
+
+	this.setAttackStrength(this.getSpeed()/10 + randomNumber.nextInt(20)); 
+	System.out.println(this.getName() + " SLASHES " +other);
+	other.setDefending(true);
+    }
+    public void dodge(basechar other)
+    {
+	boolean success = new Random().nextInt(20) <= this.getSpeed();
+	if (success)
+	    {
+		other.setAttackStrength(0);
+	    }
+
+    }
+    
+
+
+
+
+
+
 }
