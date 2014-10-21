@@ -4,6 +4,7 @@ public abstract class basechar {
     private int defense;
     private int speed;
     private int manna;      
+    private boolean defending
     private String name;
 
     public String toString(){
