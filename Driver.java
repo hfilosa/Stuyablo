@@ -5,7 +5,6 @@ public class Driver {
 	String character;
 	String newname;
 	String attackmethod;
-	basechar p1 = null;
 	System.out.println();
 	System.out.println("Welcome to Stuyablo!");
 	System.out.println();
@@ -31,68 +30,69 @@ public class Driver {
 	newname = newname.toUpperCase();
 
 	if (character.equals("warrior")) {
-	   p1 = new warrior(newname);
+	    warrior p1 = new warrior(newname);
+	    String parsing[] = { "Your adventure begins now!...", "...","... ", "...", "..." };
+	    String parsing2[] = { "...", "...", "...", "...", "....!!" };
+	    try {
+		for (int i=0;i<parsing.length;i++){
+		    Thread.sleep(500);
+		    System.out.println(parsing[i]);
+		}
+		Thread.sleep(1000);
+	    } catch(InterruptedException ex) {
+		Thread.currentThread().interrupt();
+	    }
+
+	    monster enemy = new monster();
+	    System.out.println();
+	    System.out.println("You are a "+character.toLowerCase()+" named "+newname.toUpperCase()+".");
+	    System.out.println("You walk through the forest with your weapon on your shoulder.");
+	    try { Thread.sleep(1000); } catch(InterruptedException ex) {
+		Thread.currentThread().interrupt();
+	    }
+	    try {
+		for (int i=0;i<parsing.length;i++){
+		    Thread.sleep(500);
+		    System.out.println(parsing2[i]);
+		}
+		Thread.sleep(1000);
+	    } catch(InterruptedException ex) {
+		Thread.currentThread().interrupt();
+	    }
+	    String warriorMethods[] = {"->BASH","->BLOCK"};
+	    System.out.println("You encountered an "+enemy.getName().toUpperCase()+"!");
+	    System.out.println();
+	    System.out.println("What do you want to do?");
+	    System.out.println("You can:");
+
+	    try {
+		for (int i=0;i<warriorMethods.length;i++){
+		    Thread.sleep(500);
+		    System.out.println(warriorMethods[i]);
+		}
+		Thread.sleep(1000);
+	    } catch(InterruptedException ex) {
+		Thread.currentThread().interrupt();
+	    }
+	    attackmethod = scanner.nextLine();
+	    if (attackmethod.toUpperCase().equals("BASH")) {
+		p1.bash(enemy);
+	    } else if (attackmethod.toUpperCase().equals("BLOCK")) {
+		p1.block(enemy);
+	    }
+	    System.out.println(enemy.getHealth());
 	    
 	} else if (character.equals("mage")) {
-	    p1 = new mage(newname);
+	    mage p1 = new mage(newname);
 	    
 	} else if (character.equals("rogue")) {
-	    p1 = new rogue(newname);
+	    rogue p1 = new rogue(newname);
 	   
 	} else if (character.equals("")) {
-	    p1 = new warrior(newname);
+	    warrior p1 = new warrior(newname);
 	}
 
-	String parsing[] = { "Your adventure begins now!...", "...","... ", "...", "..." };
-	String parsing2[] = { "...", "...", "...", "...", "....!!" };
-	try {
-	    for (int i=0;i<parsing.length;i++){
-	    Thread.sleep(500);
-	    System.out.println(parsing[i]);
-	    }
-	    Thread.sleep(1000);
-	} catch(InterruptedException ex) {
-	    Thread.currentThread().interrupt();
-	}
 
-	monster enemy = new monster();
-	System.out.println();
-	System.out.println("You are a "+character.toLowerCase()+" named "+newname.toUpperCase()+".");
-	System.out.println("You walk through the forest with your weapon on your shoulder.");
-	try { Thread.sleep(1000); } catch(InterruptedException ex) {
-	    Thread.currentThread().interrupt();
-	}
-	try {
-	    for (int i=0;i<parsing.length;i++){
-		Thread.sleep(500);
-		System.out.println(parsing2[i]);
-	    }
-	    Thread.sleep(1000);
-	} catch(InterruptedException ex) {
-	    Thread.currentThread().interrupt();
-	}
-	String warriorMethods[] = {"->BASH","->BLOCK"};
-	System.out.println("You encountered an "+enemy.getName().toUpperCase()+"!");
-	System.out.println();
-	System.out.println("What do you want to do?");
-	System.out.println("You can:");
-
-	try {
-	    for (int i=0;i<warriorMethods.length;i++){
-		Thread.sleep(500);
-		System.out.println(warriorMethods[i]);
-	    }
-	    Thread.sleep(1000);
-	} catch(InterruptedException ex) {
-	    Thread.currentThread().interrupt();
-	}
-	attackmethod = scanner.nextLine();
-	if (attackmethod.toUpperCase().equals("BASH")) {
-	    p1.bash(enemy);
-	} else if (attackmethod.toUpperCase().equals("BLOCK")) {
-	    p1.block(enemy);
-	}
-	System.out.println(enemy.getHealth());
 	    
 
     }
