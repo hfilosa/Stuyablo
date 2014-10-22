@@ -155,6 +155,10 @@ public class Driver {
 	    String mageMethods[] = {"->FIRESPELL","->HEAL"};
 	    System.out.println("You encountered an "+enemy.getName().toUpperCase()+"!");
 	    System.out.println();
+	    System.out.println("ORC HEALTH: "+enemy.getHealth());
+	    System.out.println(p1.getName()+"'s HEALTH: "+p1.getHealth());
+	    System.out.println();
+	    System.out.println();
 	    System.out.println("What do you want to do?");
 	    System.out.println("You can:");
 
@@ -224,7 +228,10 @@ public class Driver {
 		Thread.currentThread().interrupt();
 	    }
 	    String rogueMethods[] = {"->SLASH","->DODGE"};
-	    System.out.println("You encountered an "+enemy.getName().toUpperCase()+"!");
+	    System.out.println("You encountered an "+enemy.getName().toUpperCase()+"!");		
+	    System.out.println();
+	    System.out.println("ORC HEALTH: "+enemy.getHealth());
+	    System.out.println(p1.getName()+"'s HEALTH: "+p1.getHealth());
 	    System.out.println();
 	    System.out.println("What do you want to do?");
 	    System.out.println("You can:");
