@@ -25,7 +25,7 @@ public class Driver {
 	    character = "warrior";
 	}
 	System.out.println();
-	System.out.println("You are a "+character.toLowerCase()+" named "+newname.toUpperCase()+".");
+	
 	character = character.toLowerCase();
 	newname = newname.toUpperCase();
 
@@ -42,9 +42,22 @@ public class Driver {
 	    p1 = new warrior(newname);
 	}
 
-	
-	System.out.println(p1.getName());
+	String parsing[] = { "...", "...","Your game is being created ... ", "...", "..." };
+	try {
+	    for (int i=0;i<parsing.length;i++){
+	    Thread.sleep(500);
+	    System.out.println(parsing[i]);
+	    }
+	    Thread.sleep(1000);
+	} catch(InterruptedException ex) {
+	    Thread.currentThread().interrupt();
+	}
 
+	monster enemy = new monster();
+	System.out.println();
+	System.out.println("You are a "+character.toLowerCase()+" named "+newname.toUpperCase()+".");
+	System.out.println(enemy.getName());
+	
 	    
 
     }
