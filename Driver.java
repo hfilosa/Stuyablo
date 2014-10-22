@@ -20,7 +20,7 @@ public class Driver {
 	System.out.println("If left blank, you will be defaulted to Joe.");
         newname = scanner.nextLine();
 	if (newname.equals("")) {
-	    newname = "JOE";
+	    newname = "MIKE";
 	}
 	if (character.equals("")){
 	    character = "warrior";
@@ -31,7 +31,7 @@ public class Driver {
 	newname = newname.toUpperCase();
 
 	if (character.equals("warrior")) {
-	    p1 = new warrior(newname);
+	   p1 = new warrior(newname);
 	    
 	} else if (character.equals("mage")) {
 	    p1 = new mage(newname);
@@ -39,7 +39,7 @@ public class Driver {
 	} else if (character.equals("rogue")) {
 	    p1 = new rogue(newname);
 	   
-	} else {
+	} else if (character.equals("")) {
 	    p1 = new warrior(newname);
 	}
 
@@ -89,6 +89,8 @@ public class Driver {
 	attackmethod = scanner.nextLine();
 	if (attackmethod.toUpperCase().equals("BASH")) {
 	    p1.bash(enemy);
+	} else if (attackmethod.toUpperCase().equals("BLOCK")) {
+	    p1.block(enemy);
 	}
 	System.out.println(enemy.getHealth());
 	    
