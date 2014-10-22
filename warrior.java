@@ -2,11 +2,12 @@ import java.util.Random;
 public class warrior extends basechar
 {
     Random randomNumber = new Random();
-    public warrior()
+    public warrior(String n)
     {
 	setStrength(90 + randomNumber.nextInt(20));
 	setHealth(140 + randomNumber.nextInt(20));
 	setSpeed(40 + randomNumber.nextInt(20));
+	setName(n);
     }
     public void Bash(basechar other)
     {

@@ -1,14 +1,14 @@
 import java.util.Random;
-public class Mage extends basechar 
+public class mage extends basechar 
 {
     Random randomNumber = new Random();
-    public Mage() 
+    public Mage(String n) 
     {     
 	setStrength(40 + randomNumber.nextInt(20));
 	setHealth(90 + randomNumber.nextInt(20));
 	setSpeed(40 + randomNumber.nextInt(20));
 	setMana(90 + randomNumber.nextInt(20));
-
+	setName(n);
     }
     public void fireSpell(basechar other) 
     {

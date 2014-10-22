@@ -3,7 +3,7 @@ public abstract class basechar {
     private int strength;
     private int defense;
     private int speed;
-    private int manna;      
+    private int mana;      
     private boolean defending;
     private int attackStrength;
     private String name;
@@ -11,6 +11,19 @@ public abstract class basechar {
     
     public String toString(){
 	return name;
+    }
+    public void assignDamage(basechar other)
+    {
+	int AT = other.getAttackStrength();
+	other.lowerHealth(AT);
+
+
+    }
+	    
+    
+
+    public int getAttackStrength () {
+	return attackStrength;
     }
     public void setAttackStrength (int s){
 	attackStrength = s;
@@ -27,6 +40,9 @@ public abstract class basechar {
     public void setSpeed (int s){
 	speed = s;
     }
+    public int getSpeed (){
+	return speed;
+    }
 	
     public void setHealth(int h){
 	health=h;
@@ -34,17 +50,26 @@ public abstract class basechar {
     public int getHealth(){
 	return health;
     }
+    public void lowerHealth(int l){
+	health = health - l;
+	if (health < 0){
+	    health = 0;
+	    }
+    }
+    public void increaseHealth(int i){
+	health = health + i;
+    }
     public void setStrength(int s){
 	strength=s;
     }
     public int getStrength(){
 	return strength;
     }
-    public void setManna(int s){
-	manna=s;
+    public void setMana(int s){
+	mana=s;
     }
-    public int getManna(){
-	return manna;
+    public int getMana(){
+	return mana;
     }
     public void setName(String n){
 	name = n;
@@ -53,7 +78,7 @@ public abstract class basechar {
 	return name;
     }
     
-    public abstract void attack(basechar other);
+    
 
     public void pause(int t){
 	try {

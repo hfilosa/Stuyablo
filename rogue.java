@@ -2,11 +2,12 @@ import java.util.Random;
 public class rogue extends basechar
 {
 	Random randomNumber = new Random();
-    public rogue()
+    public rogue(String n)
     {
 	setStrength(65 + randomNumber.nextInt(20));
 	setHealth(65 + randomNumber.nextInt(20));
 	setSpeed(140 + randomNumber.nextInt(20));
+	setName(n);
     }
     public void slash(basechar other)
     {
