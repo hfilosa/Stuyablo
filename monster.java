@@ -5,45 +5,47 @@ public class monster extends basechar {
     Random r = new Random(); 
 
     public void monster() { 
-	setHealth(160) + r.nextInt(20);
-	setStrength(90) + r.nextInt(20);
-	setSpeed(450) + r.nextInt(20);
-	setManna(90) + r.nextInt(20);
+	setHealth(120) + r.nextInt(20);
+	setStrength(80) + r.nextInt(20);
+	setSpeed(45) + r.nextInt(20);
+	setManna(80) + r.nextInt(20);
         
 	setName("Orc");
     }
     public void monster(String n ) {
-	setHealth(160) + r.nextInt(20);
-	setStrength(90) + r.nextInt(20);
-	setSpeed(450) + r.nextInt(20);
-	setManna(90) + r.nextInt(20);
+	setHealth(120) + r.nextInt(20);
+	setStrength(80) + r.nextInt(20);
+	setSpeed(45) + r.nextInt(20);
+	setManna(80) + r.nextInt(20);
 
 	setName(n);
     }
    
 	
     public void evilAttack(basechar other) {
-	int damage = this.getStrength()*2/10- other.getDefense();
-	other.setHealth(other.getHealth() - damage);
+	this.setAttackStrength(this.getStrength()/10- r.nextInt(20));
+	//other.setHealth(other.getHealth() - damage);
 	System.out.println(this + "evilAtacked"+other);
-	System.out.println(other +"lost"+damage+"damage!!");
+	//System.out.println(other +"lost"+damage+"damage!!");
 	other.setDefending(true);
     } 
     public void darkMagic(basechar other) {
-	int damage = this.getManna() - other.getDefense();
-	this.setManna(this.getManna() / 2);
-	other.setHealth(other.getHealth() - damage);
+	this.setAttackStrength(this.getStrength()/10- r.nextInt(20));
+	//this.setManna(this.getManna() / 2);
+	//other.setHealth(other.getHealth() - damage);
 	System.out.println(this + "used DARKMAGIC on"+other);
-	System.out.println(other +"lost"+damage+"damage!!");
+	//System.out.println(other +"lost"+damage+"damage!!");
+	other.setDefending(true);
+	    }
+    public void dodge(basechar other) {
 	
-    }
-    public void protect(basechar other) {
-	this.setDefense(this.getDefense + 5);
    
-	System.out.println(this.getName() + " PROTECTS AGAINST " + other + "'s attack");
+	System.out.println(this.getName() + " DODGES AGAINST " + other + "'s attack");
+		other.lowerAttackStrength(this.getStrength()/9 + randomNumber.nextInt(20));
+
 	other.lowerAttackStrength(this.getStrength()/9 + r.nextInt(20));
 	if (other.getAttackStrength() < 15) {
-		System.out.println(this + "'was well protected!");
+		System.out.println(this + "was well from harms way!!");
 	    }
 	if (other.getAttackStrength() > 25) {
 		System.out.println(this + "is still vulnerable....");
