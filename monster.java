@@ -41,7 +41,7 @@ public class monster extends basechar {
 	
    
 	System.out.println(this.getName() + " DODGES AGAINST " + other + "'s attack");
-		other.lowerAttackStrength(this.getStrength()/9 + randomNumber.nextInt(20));
+		other.lowerAttackStrength(this.getStrength()/9 + r.nextInt(20));
 
 	other.lowerAttackStrength(this.getStrength()/9 + r.nextInt(20));
 	if (other.getAttackStrength() < 15) {
