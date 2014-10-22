@@ -87,6 +87,10 @@ public class Driver {
 	    Thread.currentThread().interrupt();
 	}
 	attackmethod = scanner.nextLine();
+	if (attackmethod.toUpperCase().equals("BASH")) {
+	    p1.bash(enemy);
+	}
+	System.out.println(enemy.getHealth());
 	    
 
     }

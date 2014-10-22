@@ -10,13 +10,13 @@ public class mage extends basechar
 	setMana(90 + randomNumber.nextInt(20));
 	setName(n);
     }
-    public void FIRESPELL(basechar other) 
+    public void firespell(basechar other) 
     {
 	this.setAttackStrength(this.getMana()/10 + randomNumber.nextInt(20)); 
 	System.out.println(this.getName()+" shoots FIRE at "+other.getName());
 	other.setDefending(true);
     }
-    public void HEAL(basechar other)
+    public void heal(basechar other)
     {
 	System.out.println(this.getName() + " is HEALING");
 	other.assignDamage(this);

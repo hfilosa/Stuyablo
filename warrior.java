@@ -9,7 +9,7 @@ public class warrior extends basechar
 	setSpeed(40 + randomNumber.nextInt(20));
 	setName(n);
     }
-    public void BASH(basechar other)
+    public void bash(basechar other)
     {
 	this.setAttackStrength(this.getStrength()/10 + randomNumber.nextInt(20)); 
 	System.out.println(this.getName() + " BASHES " +other);
@@ -22,7 +22,7 @@ public class warrior extends basechar
      Maybe we should add more defense methods? The defense method then reduces the attack strength by a certain amount. I put it as strength/9 + random int from 0 to 20.
      Finally, the damage is given 
     */
-    public void BLOCK(basechar other)
+    public void block(basechar other)
     {
 	System.out.println(this.getName() + " BLOCKS " + other.getName() + "'s attack");
 	other.lowerAttackStrength(this.getStrength()/9 + randomNumber.nextInt(20));
