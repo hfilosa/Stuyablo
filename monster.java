@@ -25,7 +25,7 @@ public class monster extends basechar {
     public void EVILATTACK(basechar other) {
 	this.setAttackStrength(this.getStrength()/10- r.nextInt(20));
 	//other.setHealth(other.getHealth() - damage);
-	System.out.println(this + "evilAtacked"+other);
+	System.out.println(this + "EvilAtacked"+other);
 	//System.out.println(other +"lost"+damage+"damage!!");
 	other.setDefending(true);
     } 
