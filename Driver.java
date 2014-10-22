@@ -47,7 +47,7 @@ public class Driver {
 	    monster enemy = new monster();
 	    System.out.println();
 	    System.out.println("You are a "+character.toLowerCase()+" named "+newname.toUpperCase()+".");
-	    System.out.println("You walk through the forest with your mace on your shoulder.");
+	    System.out.println("You walk slowly through the abandoned castle, your mace dragging along the floor.");
 	    try { Thread.sleep(1000); } catch(InterruptedException ex) {
 		Thread.currentThread().interrupt();
 	    }
@@ -119,7 +119,7 @@ public class Driver {
 	    monster enemy = new monster();
 	    System.out.println();
 	    System.out.println("You are a "+character.toLowerCase()+" named "+newname.toUpperCase()+".");
-	    System.out.println("You walk through the forest, with a firm grip on your wand.");
+	    System.out.println("You have a firm grip on your wand as you advance through the labryinth.");
 	    try { Thread.sleep(1000); } catch(InterruptedException ex) {
 		Thread.currentThread().interrupt();
 	    }
