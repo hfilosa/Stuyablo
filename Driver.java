@@ -33,6 +33,7 @@ public class Driver {
 	    warrior p1 = new warrior(newname);
 	    String parsing[] = { "Your adventure begins now!...", "...","... ", "...", "..." };
 	    String parsing2[] = { "...", "...", "...", "...", "....!!" };
+	    String parsing3[] = { "...", "...", "...", "..." };
 	    try {
 		for (int i=0;i<parsing.length;i++){
 		    Thread.sleep(500);
@@ -75,12 +76,26 @@ public class Driver {
 		Thread.currentThread().interrupt();
 	    }
 	    attackmethod = scanner.nextLine();
+	    System.out.println();
+	    System.out.println();
+	    System.out.println();
 	    if (attackmethod.toUpperCase().equals("BASH")) {
 		p1.bash(enemy);
 	    } else if (attackmethod.toUpperCase().equals("BLOCK")) {
 		p1.block(enemy);
 	    }
-	    System.out.println(enemy.getHealth());
+	    try {
+		for (int i=0;i<parsing3.length;i++){
+		    Thread.sleep(500);
+		    System.out.println(parsing3[i]);
+		}
+		Thread.sleep(1000);
+	    } catch(InterruptedException ex) {
+		Thread.currentThread().interrupt();
+	    }
+	    System.out.println();
+	    System.out.println("ORC HEALTH: "+enemy.getHealth());
+	    System.out.println(p1.getName()+"'s HEALTH: "+p1.getHealth());
 	    
 
 
@@ -90,6 +105,7 @@ public class Driver {
 	    mage p1 = new mage(newname);
 	    String parsing[] = { "Your adventure begins now!...", "...","... ", "...", "..." };
 	    String parsing2[] = { "...", "...", "...", "...", "....!!" };
+	    String parsing3[] = { "...", "...", "...", "..." };
 	    try {
 		for (int i=0;i<parsing.length;i++){
 		    Thread.sleep(500);
@@ -137,7 +153,18 @@ public class Driver {
 	    } else if (attackmethod.toUpperCase().equals("HEAL")) {
 		p1.heal(enemy);
 	    }
-	    System.out.println(enemy.getHealth());
+	    try {
+		for (int i=0;i<parsing3.length;i++){
+		    Thread.sleep(500);
+		    System.out.println(parsing3[i]);
+		}
+		Thread.sleep(1000);
+	    } catch(InterruptedException ex) {
+		Thread.currentThread().interrupt();
+	    }
+	    System.out.println();
+	    System.out.println("ORC HEALTH: "+enemy.getHealth());
+	    System.out.println(p1.getName()+"'s HEALTH: "+p1.getHealth());
 	    
 
 
@@ -146,6 +173,7 @@ public class Driver {
 	    rogue p1 = new rogue(newname);
 	    String parsing[] = { "Your adventure begins now!...", "...","... ", "...", "..." };
 	    String parsing2[] = { "...", "...", "...", "...", "....!!" };
+	    String parsing3[] = { "...", "...", "...", "..." };
 	    try {
 		for (int i=0;i<parsing.length;i++){
 		    Thread.sleep(500);
@@ -188,66 +216,30 @@ public class Driver {
 		Thread.currentThread().interrupt();
 	    }
 	    attackmethod = scanner.nextLine();
+	    System.out.println();
+	    System.out.println();
+	    System.out.println();
 	    if (attackmethod.toUpperCase().equals("SLASH")) {
 		p1.slash(enemy);
 	    } else if (attackmethod.toUpperCase().equals("DODGE")) {
 		p1.dodge(enemy);
 	    }
-	    System.out.println(enemy.getHealth());
+	    try {
+		for (int i=0;i<parsing3.length;i++){
+		    Thread.sleep(500);
+		    System.out.println(parsing3[i]);
+		}
+		Thread.sleep(1000);
+	    } catch(InterruptedException ex) {
+		Thread.currentThread().interrupt();
+	    }
+	    System.out.println();
+	    System.out.println("ORC HEALTH: "+enemy.getHealth());
+	    System.out.println(p1.getName()+"'s HEALTH: "+p1.getHealth());
+
 	    
 	} else if (character.equals("")) {
-	    warrior p1 = new warrior(newname);
-	    String parsing[] = { "Your adventure begins now!...", "...","... ", "...", "..." };
-	    String parsing2[] = { "...", "...", "...", "...", "....!!" };
-	    try {
-		for (int i=0;i<parsing.length;i++){
-		    Thread.sleep(500);
-		    System.out.println(parsing[i]);
-		}
-		Thread.sleep(1000);
-	    } catch(InterruptedException ex) {
-		Thread.currentThread().interrupt();
-	    }
-
-	    monster enemy = new monster();
-	    System.out.println();
-	    System.out.println("You are a "+character.toLowerCase()+" named "+newname.toUpperCase()+".");
-	    System.out.println("You walk through the forest with your weapon on your shoulder.");
-	    try { Thread.sleep(1000); } catch(InterruptedException ex) {
-		Thread.currentThread().interrupt();
-	    }
-	    try {
-		for (int i=0;i<parsing.length;i++){
-		    Thread.sleep(500);
-		    System.out.println(parsing2[i]);
-		}
-		Thread.sleep(1000);
-	    } catch(InterruptedException ex) {
-		Thread.currentThread().interrupt();
-	    }
-	    String warriorMethods[] = {"->BASH","->BLOCK"};
-	    System.out.println("You encountered an "+enemy.getName().toUpperCase()+"!");
-	    System.out.println();
-	    System.out.println("What do you want to do?");
-	    System.out.println("You can:");
-
-	    try {
-		for (int i=0;i<warriorMethods.length;i++){
-		    Thread.sleep(500);
-		    System.out.println(warriorMethods[i]);
-		}
-		Thread.sleep(1000);
-	    } catch(InterruptedException ex) {
-		Thread.currentThread().interrupt();
-	    }
-	    attackmethod = scanner.nextLine();
-	    if (attackmethod.toUpperCase().equals("BASH")) {
-		p1.bash(enemy);
-	    } else if (attackmethod.toUpperCase().equals("BLOCK")) {
-		p1.block(enemy);
-	    }
-	    System.out.println(enemy.getHealth());
-	    
+	    	    
 	}
 
 
