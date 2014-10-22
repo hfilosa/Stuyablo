@@ -5,6 +5,7 @@ public class Driver {
 	String character;
 	String newname;
 	String attackmethod;
+	boolean encounter;
 	System.out.println();
 	System.out.println("Welcome to Stuyablo!");
 	System.out.println();
@@ -62,40 +63,47 @@ public class Driver {
 	    }
 	    String warriorMethods[] = {"->BASH","->BLOCK"};
 	    System.out.println("You encountered an "+enemy.getName().toUpperCase()+"!");
-	    System.out.println();
-	    System.out.println("What do you want to do?");
-	    System.out.println("You can:");
+	    encounter = true;
+	    /* while (encounter == true) {*/
+		System.out.println();
+		System.out.println("What do you want to do?");
+		System.out.println("You can:");
 
-	    try {
-		for (int i=0;i<warriorMethods.length;i++){
-		    Thread.sleep(500);
-		    System.out.println(warriorMethods[i]);
+		try {
+		    for (int i=0;i<warriorMethods.length;i++){
+			Thread.sleep(500);
+			System.out.println(warriorMethods[i]);
+		    }
+		    Thread.sleep(1000);
+		} catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
 		}
-		Thread.sleep(1000);
-	    } catch(InterruptedException ex) {
-		Thread.currentThread().interrupt();
-	    }
-	    attackmethod = scanner.nextLine();
-	    System.out.println();
-	    System.out.println();
-	    System.out.println();
-	    if (attackmethod.toUpperCase().equals("BASH")) {
-		p1.bash(enemy);
-	    } else if (attackmethod.toUpperCase().equals("BLOCK")) {
-		p1.block(enemy);
-	    }
-	    try {
-		for (int i=0;i<parsing3.length;i++){
-		    Thread.sleep(500);
-		    System.out.println(parsing3[i]);
+		attackmethod = scanner.nextLine();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		if (attackmethod.toUpperCase().equals("BASH")) {
+		    p1.bash(enemy);
+		} else if (attackmethod.toUpperCase().equals("BLOCK")) {
+		    p1.block(enemy);
 		}
-		Thread.sleep(1000);
-	    } catch(InterruptedException ex) {
-		Thread.currentThread().interrupt();
-	    }
-	    System.out.println();
-	    System.out.println("ORC HEALTH: "+enemy.getHealth());
-	    System.out.println(p1.getName()+"'s HEALTH: "+p1.getHealth());
+		try {
+		    for (int i=0;i<parsing3.length;i++){
+			Thread.sleep(500);
+			System.out.println(parsing3[i]);
+		    }
+		    Thread.sleep(1000);
+		} catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+		}
+		System.out.println();
+		System.out.println("ORC HEALTH: "+enemy.getHealth());
+		System.out.println(p1.getName()+"'s HEALTH: "+p1.getHealth());
+		/*	if (enemy.getHealth() <= 0 || p1.getHealth() <= 0) {
+		    encounter = false;
+		    }
+		    }*/
+	    
 	    
 
 
@@ -148,6 +156,9 @@ public class Driver {
 		Thread.currentThread().interrupt();
 	    }
 	    attackmethod = scanner.nextLine();
+	    System.out.println();
+	    System.out.println();
+	    System.out.println();
 	    if (attackmethod.toUpperCase().equals("FIRESPELL")) {
 		p1.firespell(enemy);
 	    } else if (attackmethod.toUpperCase().equals("HEAL")) {
