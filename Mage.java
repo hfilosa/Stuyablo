@@ -2,7 +2,7 @@ import java.util.Random;
 public class mage extends basechar 
 {
     Random randomNumber = new Random();
-    public Mage(String n) 
+    public mage(String n) 
     {     
 	setStrength(40 + randomNumber.nextInt(20));
 	setHealth(90 + randomNumber.nextInt(20));
