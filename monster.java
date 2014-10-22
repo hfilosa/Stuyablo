@@ -1,10 +1,10 @@
 import java.util.*;
 import java.io.*;
 
-public class Monster extends basechar { 
+public class monster extends basechar { 
     Random r = new Random(); 
 
-    public void Monster() { 
+    public void monster() { 
 	setHealth(160) + r.nextInt(20);
 	setStrength(90) + r.nextInt(20);
 	setSpeed(450) + r.nextInt(20);
@@ -12,7 +12,7 @@ public class Monster extends basechar {
         
 	setName("Orc");
     }
-    public void Monster(String n ) {
+    public void monster(String n ) {
 	setHealth(160) + r.nextInt(20);
 	setStrength(90) + r.nextInt(20);
 	setSpeed(450) + r.nextInt(20);
