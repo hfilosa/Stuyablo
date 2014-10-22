@@ -14,11 +14,17 @@ public class Mage extends basechar
     {
 	this.setAttackStrength(this.getMana()/10 + randomNumber.nextInt(20)); 
 	System.out.println(this.getName()+" shoots FIRE at "+other.getName());
-	other.setDefending(true)
+	other.setDefending(true);
     }
     public void heal (basechar other)
     {
-	other.assignDamage(this)
-	this.increaseHealth(this.getMana()/9 + randomNumber.nextInt(20))
+	System.out.println(this.getName() + " is HEALING");
+	other.assignDamage(this);
+	    if (this.getHealth() == 0)
+		{
+		    System.out.println(this.getName() + " was killed while HEALING");
+		}
+	    this.increaseHealth(this.getMana()/3 + randomNumber.nextInt(20));
+    }
 }
 			   

@@ -21,10 +21,19 @@ public class warrior extends basechar
      Maybe we should add more defense methods? The defense method then reduces the attack strength by a certain amount. I put it as strength/9 + random int from 0 to 20.
      Finally, the damage is given 
     */
-    public void Shield(basechar other)
+    public void block(basechar other)
     {
+	System.out.println(this.getName() + " BLOCKS " + other.getName() + "'s attack");
 	other.lowerAttackStrength(this.getStrength()/9 + randomNumber.nextInt(20));
-	this.setDefending(false);
+	if (other.getAttackStrength() < 15)
+	    {
+		System.out.println(this.getName() + "'s block was super effective!");
+	    }
+	if (other.getAttackStrength() > 25)
+	    {
+		System.out.println(this.getName() + "'s block didn't work very well....");
+	    }
 	other.assignDamage(this);
+	
     }
 }

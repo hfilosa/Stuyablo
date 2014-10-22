@@ -17,10 +17,16 @@ public class rogue extends basechar
     }
     public void dodge(basechar other)
     {
+	System.out.println(this.getName() + " is trying to DODGE " + other.getName() + "'s attack");
 	boolean success = new Random().nextInt(20) <= this.getSpeed();
 	if (success)
 	    {
 		other.setAttackStrength(0);
+		System.out.println("DODGE was effective! No damage is taken!");
+	    }
+	else
+	    {
+		System.out.println("DODGE failed." + this.getName() + " took damage");
 	    }
 
     }
