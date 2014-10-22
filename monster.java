@@ -8,7 +8,7 @@ public class monster extends basechar {
 	setHealth(120) + r.nextInt(20);
 	setStrength(80) + r.nextInt(20);
 	setSpeed(45) + r.nextInt(20);
-	setManna(80) + r.nextInt(20);
+	setMana(80) + r.nextInt(20);
         
 	setName("Orc");
     }
@@ -16,7 +16,7 @@ public class monster extends basechar {
 	setHealth(120) + r.nextInt(20);
 	setStrength(80) + r.nextInt(20);
 	setSpeed(45) + r.nextInt(20);
-	setManna(80) + r.nextInt(20);
+	setMana(80) + r.nextInt(20);
 
 	setName(n);
     }
