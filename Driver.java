@@ -9,14 +9,14 @@ public class Driver {
 	System.out.println("Welcome to Stuyablo!");
 	System.out.println();
 	System.out.println("What class do you want to be?");
-	System.out.println("If left blank, you will be defaulted to Warrior.");
+	System.out.println("If left blank, you will be defaulted to WARRIOR.");
 	System.out.println("-> Warrior");
 	System.out.println("-> Mage");
 	System.out.println("-> Rogue");
 	character = scanner.nextLine();
 	System.out.println();
 	System.out.println("What is your name?");
-	System.out.println("If left blank, you will be defaulted to Joe.");
+	System.out.println("If left blank, you will be defaulted to MIKE.");
         newname = scanner.nextLine();
 	if (newname.equals("")) {
 	    newname = "MIKE";
