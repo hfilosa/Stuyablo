@@ -67,6 +67,10 @@ public class Driver {
 	    /* while (encounter == true) {*/
 		System.out.println();
 		System.out.println("What do you want to do?");
+		System.out.println();
+		System.out.println("ORC HEALTH: "+enemy.getHealth());
+		System.out.println(p1.getName()+"'s HEALTH: "+p1.getHealth());
+		System.out.println();
 		System.out.println("You can:");
 
 		try {
@@ -84,6 +88,9 @@ public class Driver {
 		System.out.println();
 		if (attackmethod.toUpperCase().equals("BASH")) {
 		    p1.bash(enemy);
+		    if (enemy.getDefending()) {
+			enemy.dodge(p1);
+		    }
 		} else if (attackmethod.toUpperCase().equals("BLOCK")) {
 		    p1.block(enemy);
 		}
@@ -103,6 +110,11 @@ public class Driver {
 		    encounter = false;
 		    }
 		    }*/
+		System.out.println();
+		System.out.println();
+		Random r1 = new Random();
+		r1.nextInt(2);
+		    
 	    
 	    
 

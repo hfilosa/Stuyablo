@@ -40,15 +40,15 @@ public class monster extends basechar {
     public void dodge(basechar other) {
 	
    
-	System.out.println(this.getName() + " DODGES AGAINST " + other + "'s attack");
+	System.out.println(this.getName() + " DODGES " + other + "'s attack");
 		other.lowerAttackStrength(this.getStrength()/9 + r.nextInt(20));
 
 	other.lowerAttackStrength(this.getStrength()/9 + r.nextInt(20));
 	if (other.getAttackStrength() < 15) {
-		System.out.println(this + "was well from harms way!!");
+		System.out.println(this + " was well from harms way!!");
 	    }
 	if (other.getAttackStrength() > 25) {
-		System.out.println(this + "is still vulnerable....");
+		System.out.println(this + " is still vulnerable....");
 	    }
 	other.assignDamage(this);
 	
