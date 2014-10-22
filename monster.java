@@ -22,14 +22,14 @@ public class monster extends basechar {
     }
    
 	
-    public void EVILAttack(basechar other) {
+    public void EVILATTACK(basechar other) {
 	this.setAttackStrength(this.getStrength()/10- r.nextInt(20));
 	//other.setHealth(other.getHealth() - damage);
 	System.out.println(this + "EvilAtacked"+other);
 	//System.out.println(other +"lost"+damage+"damage!!");
 	other.setDefending(true);
     } 
-    public void DARKMagic(basechar other) {
+    public void DARKMAGIC(basechar other) {
 	this.setAttackStrength(this.getStrength()/10- r.nextInt(20));
 	//this.setManna(this.getManna() / 2);
 	//other.setHealth(other.getHealth() - damage);
