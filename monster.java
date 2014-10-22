@@ -37,22 +37,19 @@ public class monster extends basechar {
 	//System.out.println(other +"lost"+damage+"damage!!");
 	other.setDefending(true);
 	    }
-    public void dodge(basechar other) {
-	
-   
-	System.out.println(this.getName() + " DODGES AGAINST " + other + "'s attack");
-		other.lowerAttackStrength(this.getStrength()/9 + r.nextInt(20));
-
-	other.lowerAttackStrength(this.getStrength()/9 + r.nextInt(20));
-	if (other.getAttackStrength() < 15) {
-		System.out.println(this + "was well from harms way!!");
+    public void dodge(basechar other) 
+    {
+	System.out.println(this.getName() + " is trying to DODGE " + other.getName() + "'s attack");
+	boolean success = new Random().nextInt(20) <= this.getSpeed();
+	if (success)
+	    {
+		other.setAttackStrength(0);
+		System.out.println("DODGE was effective! No damage is taken!");
 	    }
-	if (other.getAttackStrength() > 25) {
-		System.out.println(this + "is still vulnerable....");
+	else
+	    {
+	    System.out.println("DODGE failed." + this.getName() + " took damage");
 	    }
-	other.assignDamage(this);
-	
     }
-	
 	
 }
