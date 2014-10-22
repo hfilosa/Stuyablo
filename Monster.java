@@ -1,24 +1,33 @@
-public class monster extends basechar { 
-    public void monster() { 
-	setHealth(60);
-	setStrength(60);
-	setSpeed(60);
-	setManna(60);
-	int exp = 100;
-	int weapon = 60;
+import java.util.*;
+import java.io.*;
+
+public class Monster extends basechar { 
+    Random r = new Random(); 
+
+    public void Monster() { 
+	setHealth(160) + r.nextInt(20);
+	setStrength(90) + r.nextInt(20);
+	setSpeed(450) + r.nextInt(20);
+	setManna(90) + r.nextInt(20);
+        
 	setName("Orc");
     }
-    // private String item;
-    //item = "potion,elixir,ether,1-up";
-    //    String delims = ",";
-    //    String[] tokens = item.split(delims);
+    public void Monster(String n ) {
+	setHealth(160) + r.nextInt(20);
+	setStrength(90) + r.nextInt(20);
+	setSpeed(450) + r.nextInt(20);
+	setManna(90) + r.nextInt(20);
+
+	setName(n);
+    }
    
 	
     public void evilAttack(basechar other) {
-	int damage = this.getStrength()+weapon - other.getDefense();
+	int damage = this.getStrength()*2/10- other.getDefense();
 	other.setHealth(other.getHealth() - damage);
 	System.out.println(this + "evilAtacked"+other);
 	System.out.println(other +"lost"+damage+"damage!!");
+	other.setDefending(true);
     } 
     public void darkMagic(basechar other) {
 	int damage = this.getManna() - other.getDefense();
@@ -30,12 +39,17 @@ public class monster extends basechar {
     }
     public void protect(basechar other) {
 	this.setDefense(this.getDefense + 5);
-    }
-    public void deathSequence(basechar other) {
-        public int reward = exp
-	exp =0;
-	//drop items
-	//String drop = tokens[0];
+   
+	System.out.println(this.getName() + " PROTECTS AGAINST " + other + "'s attack");
+	other.lowerAttackStrength(this.getStrength()/9 + r.nextInt(20));
+	if (other.getAttackStrength() < 15) {
+		System.out.println(this + "'was well protected!");
+	    }
+	if (other.getAttackStrength() > 25) {
+		System.out.println(this + "is still vulnerable....");
+	    }
+	other.assignDamage(this);
+	
     }
 	
 	
