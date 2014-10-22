@@ -53,7 +53,7 @@ public class Driver {
 	    Thread.currentThread().interrupt();
 	}
 
-	monster enemy = new monster();
+	monster enemy = new monster("Orc");
 	System.out.println();
 	System.out.println("You are a "+character.toLowerCase()+" named "+newname.toUpperCase()+".");
 	System.out.println(enemy.getName());

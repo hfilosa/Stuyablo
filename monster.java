@@ -4,7 +4,7 @@ import java.io.*;
 public class monster extends basechar { 
     Random r = new Random(); 
 
-    public void monster() { 
+    public monster() { 
 	setHealth(120 + r.nextInt(20));
 	setStrength(80 + r.nextInt(20));
 	setSpeed(45 + r.nextInt(20));
@@ -12,7 +12,7 @@ public class monster extends basechar {
         
 	setName("Orc");
     }
-    public void monster(String n ) {
+    public monster(String n ) {
 	setHealth(120 + r.nextInt(20));
 	setStrength(80 + r.nextInt(20));
 	setSpeed(45 + r.nextInt(20));
