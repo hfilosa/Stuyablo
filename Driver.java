@@ -42,7 +42,8 @@ public class Driver {
 	    p1 = new warrior(newname);
 	}
 
-	String parsing[] = { "...", "...","Your game is being created ... ", "...", "..." };
+	String parsing[] = { "Your adventure begins now!...", "...","... ", "...", "..." };
+	String parsing2[] = { "...", "...", "...", "...", "You encountered a monster!" };
 	try {
 	    for (int i=0;i<parsing.length;i++){
 	    Thread.sleep(500);
@@ -53,9 +54,22 @@ public class Driver {
 	    Thread.currentThread().interrupt();
 	}
 
-	monster enemy = new monster("Orc");
+	monster enemy = new monster();
 	System.out.println();
 	System.out.println("You are a "+character.toLowerCase()+" named "+newname.toUpperCase()+".");
+	System.out.println("You walk through the forest with your weapon on your shoulder.");
+	try { Thread.sleep(1000); } catch(InterruptedException ex) {
+	    Thread.currentThread().interrupt();
+	}
+	try {
+	    for (int i=0;i<parsing.length;i++){
+		Thread.sleep(500);
+		System.out.println(parsing2[i]);
+	    }
+	    Thread.sleep(1000);
+	} catch(InterruptedException ex) {
+	    Thread.currentThread().interrupt();
+	}
 	System.out.println(enemy.getName());
 	
 	    
