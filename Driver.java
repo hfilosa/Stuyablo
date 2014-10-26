@@ -20,7 +20,7 @@ public class Driver {
 	    String parsing3[] = { "...", "...", "...", "..." };
 	    try {
 		for (int i=0;i<parsing.length;i++){
-		    Thread.sleep(500);
+		    Thread.sleep(200);
 		    System.out.println(parsing[i]);
 		}
 		Thread.sleep(1000);
@@ -37,7 +37,7 @@ public class Driver {
 	    }
 	    try {
 		for (int i=0;i<parsing.length;i++){
-		    Thread.sleep(500);
+		    Thread.sleep(200);
 		    System.out.println(parsing2[i]);
 		}
 		Thread.sleep(1000);
@@ -48,18 +48,18 @@ public class Driver {
 	    String defenseMethods[] = {"->BLOCK", "->RUN"};
 	    System.out.println("You encountered an "+enemy.getName().toUpperCase()+"!");
 	    encounter = true;
-		System.out.println();
-		System.out.println("What do you want to do?");
-		System.out.println();
-		System.out.println(enemy.getName() + " HEALTH: "+enemy.getHealth());
-		System.out.println(p1.getName()+"'s HEALTH: "+p1.getHealth());
-		while (encounter == true) {
+	    System.out.println();
+	    System.out.println("What do you want to do?");
+	    System.out.println();
+	    System.out.println(enemy.getName() + " HEALTH: "+enemy.getHealth());
+	    System.out.println(p1.getName()+"'s HEALTH: "+p1.getHealth());
+	    while (encounter == true) {
 		System.out.println();
 		System.out.println("You can:");
 
 		try {
 		    for (int i=0;i<attackMethods.length;i++){
-			Thread.sleep(500);
+			Thread.sleep(200);
 			System.out.println(attackMethods[i]);
 		    }
 		    Thread.sleep(1000);
@@ -78,7 +78,7 @@ public class Driver {
 		}
 		try {
 		    for (int i=0;i<parsing3.length;i++){
-			Thread.sleep(500);
+			Thread.sleep(200);
 			System.out.println(parsing3[i]);
 		    }
 		    Thread.sleep(1000);
@@ -89,9 +89,9 @@ public class Driver {
 		System.out.println("THIEF HEALTH: "+enemy.getHealth());
 		System.out.println(p1.getName()+"'s HEALTH: "+p1.getHealth());
 		/*	if (enemy.getHealth() <= 0 || p1.getHealth() <= 0) {
-		    encounter = false;
-		    }
-		    }*/
+			encounter = false;
+			}
+			}*/
 		System.out.println();
 		System.out.println();
 		Random r1 = new Random();
@@ -105,7 +105,7 @@ public class Driver {
 		    }
 		System.out.println("Uh oh...");
 		System.out.println("What do you do?");
-		 try {
+		try {
 		    for (int i=0;i<defenseMethods.length;i++){
 			Thread.sleep(500);
 			System.out.println(defenseMethods[i]);
@@ -123,7 +123,7 @@ public class Driver {
 		}
 		try {
 		    for (int i=0;i<parsing3.length;i++){
-			Thread.sleep(500);
+			Thread.sleep(200);
 			System.out.println(parsing3[i]);
 		    }
 		    Thread.sleep(1000);
